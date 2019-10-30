@@ -1,7 +1,7 @@
-const Collector = require('../models/Collector');
-const Bcrypt = require('bcryptjs');
+import Collector from '../models/Collector';
+import Bcrypt from 'bcryptjs';
 
-module.exports={
+class SessionController{
     async store(req,res){
         const user = await Collector.findOne({email});
         if(!user){
@@ -14,3 +14,4 @@ module.exports={
         res.json({message:"Login Ok"})
     }
 }
+export default new SessionController();

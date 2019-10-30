@@ -1,5 +1,5 @@
 
-const express= require('express');
+import express from 'express';
 
 
 const routes = express.Router();
@@ -10,4 +10,4 @@ const SessionController = require('./controllers/SessionController');
 routes.post('/register', CreateController.store);
 routes.post('/login', SessionController.store);
 
-module.exports=routes;
+export default routes;

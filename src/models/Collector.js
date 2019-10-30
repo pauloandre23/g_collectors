@@ -1,6 +1,5 @@
 
-
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const CollectorSchema=new mongoose.Schema({
     email: String,
@@ -13,4 +12,4 @@ const CollectorSchema=new mongoose.Schema({
 
 });
 
-module.exports=mongoose.model('Collector', CollectorSchema);
+export default mongoose.model('Collector', CollectorSchema);

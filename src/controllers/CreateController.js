@@ -1,6 +1,8 @@
-const Collector = require('../models/Collector');
-const Bcrypt = require('bcryptjs');
-module.exports={
+import Collector from '../models/Collector';
+import Bcrypt from 'bcryptjs';
+
+class CreateController{
+
 async store(req,res){
    
     const {email} = req.body;
@@ -16,3 +18,4 @@ async store(req,res){
 
 }
 }
+export default new CreateController();
